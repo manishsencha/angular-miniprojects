@@ -1,0 +1,31 @@
+#timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.timer-container {
+  display: flex;
+  align-items: center;
+}
+.timer-container > * {
+  margin: 0 10px;
+}
+.timer-container > mat-form-field {
+  width: 100px;
+  font-size: 20px;
+}
+.timer-unit {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffd740 !important;
+}
+
+input:disabled {
+  color: #ffd740 !important;
+}
+button[mat-raised-button] {
+  width: 50%;
+}
