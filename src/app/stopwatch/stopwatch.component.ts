@@ -8,12 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class StopwatchComponent implements OnInit {
   private interval: any;
   private time = 0;
+  public isInitialStart = true;
   public hh: any = 0;
   public mm: any = 0;
   public ss: any = 0;
   public ms: any = 0;
   public started = false;
   public start() {
+    this.isInitialStart = false;
     this.interval = setInterval(() => {
       this.started = true;
       this.time += 1;
@@ -38,6 +40,7 @@ export class StopwatchComponent implements OnInit {
     this.ss = 0;
     this.ms = 0;
     this.time = 0;
+    this.isInitialStart = true;
     this.started = false;
   }
 

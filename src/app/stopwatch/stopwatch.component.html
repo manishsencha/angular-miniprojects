@@ -23,7 +23,7 @@
     disabled="{{ started }}"
     (click)="start()"
   >
-    Start
+    {{ isInitialStart ? "Start" : "Resume" }}
   </button>
   <button
     mat-raised-button
@@ -33,11 +33,5 @@
   >
     Stop
   </button>
-  <button
-    mat-raised-button
-    color="accent"
-    (click)="reset()"
-  >
-    Reset
-  </button>
+  <button mat-raised-button color="accent" (click)="reset()">Reset</button>
 </div>
