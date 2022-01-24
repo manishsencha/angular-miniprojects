@@ -1,4 +1,5 @@
 <div id="timer">
+  <h1 class="timer-heading">Timer</h1>
   <div class="timer-container">
     <mat-form-field appearance="fill">
       <input
@@ -39,4 +40,12 @@
   >
     Start
   </button>
+  <button
+  mat-raised-button
+  color="accent"
+  disabled="{{ !started }}"
+  (click)="pauseTimer()"
+>
+  Pause
+</button>
 </div>

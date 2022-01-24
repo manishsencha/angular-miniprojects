@@ -1,0 +1,35 @@
+#stopwatch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .stopwatch-heading{
+    font-size: 40px;
+  }
+  .stopwatch-container {
+    display: flex;
+    align-items: center;
+  }
+  .stopwatch-container > * {
+    margin: 0 10px;
+  }
+  .stopwatch-container > mat-form-field {
+    width: 100px;
+    font-size: 20px;
+  }
+  .stopwatch-unit {
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffd740 !important;
+  }
+  
+  input:disabled {
+    color: #ffd740 !important;
+  }
+  button[mat-raised-button] {
+    width: 50%;
+    margin: 5px 0;
+  }
+  

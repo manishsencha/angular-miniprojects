@@ -5,7 +5,9 @@
   align-items: center;
   height: 100%;
 }
-
+.timer-heading{
+  font-size: 40px;
+}
 .timer-container {
   display: flex;
   align-items: center;
@@ -28,4 +30,5 @@ input:disabled {
 }
 button[mat-raised-button] {
   width: 50%;
+  margin: 5px 0;
 }

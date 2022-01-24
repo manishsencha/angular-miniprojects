@@ -1,1 +1,43 @@
-<p>stopwatch works!</p>
+<div id="stopwatch">
+  <h1 class="stopwatch-heading">Stopwatch</h1>
+  <div class="stopwatch-container">
+    <mat-form-field appearance="fill">
+      <input type="number" matInput value="{{ hh }}" disabled="{{ true }}" />
+    </mat-form-field>
+    <div class="stopwatch-unit">H</div>
+    <mat-form-field appearance="fill">
+      <input type="number" matInput value="{{ mm }}" disabled="{{ true }}" />
+    </mat-form-field>
+    <div class="stopwatch-unit">M</div>
+    <mat-form-field appearance="fill">
+      <input type="number" matInput value="{{ ss }}" disabled="{{ true }}" />
+    </mat-form-field>
+    <div class="stopwatch-unit">S</div>
+    <mat-form-field appearance="fill">
+      <input type="number" matInput value="{{ ms }}" disabled="{{ true }}" />
+    </mat-form-field>
+  </div>
+  <button
+    mat-raised-button
+    color="accent"
+    disabled="{{ started }}"
+    (click)="start()"
+  >
+    Start
+  </button>
+  <button
+    mat-raised-button
+    color="accent"
+    disabled="{{ !started }}"
+    (click)="stop()"
+  >
+    Stop
+  </button>
+  <button
+    mat-raised-button
+    color="accent"
+    (click)="reset()"
+  >
+    Reset
+  </button>
+</div>
