@@ -50,7 +50,10 @@ export class StopwatchComponent implements OnInit {
     this.lap_active = false;
   }
   public lap() {
-    this.lap_array.push({ hh: this.hh, mm: this.mm, ss: this.ss, ms: this.ms });
+    this.lap_array = [
+      { hh: this.hh, mm: this.mm, ss: this.ss, ms: this.ms },
+      ...this.lap_array,
+    ];
     console.log(this.lap_array);
   }
   ngOnInit(): void {}

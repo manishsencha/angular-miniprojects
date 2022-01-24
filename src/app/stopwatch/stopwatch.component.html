@@ -55,7 +55,7 @@
     Reset
   </button>
   <div class="stopwatch-lap-container lap-active">
-    <div *ngFor="let lap of lap_array.reverse()" class="stopwatch-lap-time">
+    <div *ngFor="let lap of lap_array" class="stopwatch-lap-time">
       <span>{{ lap.hh }}H</span>
       <span>{{ lap.mm }}M</span>
       <span>{{ lap.ss }}S</span>
