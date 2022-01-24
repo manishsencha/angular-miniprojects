@@ -8,9 +8,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { TimerComponent } from './timer/timer.component';
+import { StopwatchComponent } from './stopwatch/stopwatch.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, TimerComponent],
+  declarations: [AppComponent, HomeComponent, TimerComponent, StopwatchComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
