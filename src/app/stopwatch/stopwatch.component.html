@@ -20,10 +20,10 @@
   <button
     mat-raised-button
     color="accent"
-    disabled="{{ started }}"
+    disabled="{{ start_disabled }}"
     (click)="start()"
   >
-    {{ isInitialStart ? "Start" : "Resume" }}
+    Start
   </button>
   <button
     mat-raised-button
@@ -33,5 +33,21 @@
   >
     Stop
   </button>
+  <button
+    mat-raised-button
+    color="accent"
+    disabled="{{ !lap_active }}"
+    (click)="lap()"
+  >
+    Lap
+  </button>
   <button mat-raised-button color="accent" (click)="reset()">Reset</button>
+  <div class="stopwatch-lap-container lap-active">
+    <div *ngFor="let lap of lap_array.reverse()" class="stopwatch-lap-time">
+      <span>{{ lap.hh }}H</span>
+      <span>{{ lap.mm }}M</span>
+      <span>{{ lap.ss }}S</span>
+      <span>{{ lap.ms }}MS</span>
+    </div>
+  </div>
 </div>

@@ -8,14 +8,18 @@ import { Component, OnInit } from '@angular/core';
 export class StopwatchComponent implements OnInit {
   private interval: any;
   private time = 0;
-  public isInitialStart = true;
   public hh: any = 0;
   public mm: any = 0;
   public ss: any = 0;
   public ms: any = 0;
   public started = false;
+  public lap_array: any[] = [];
+  public lap_active = false;
+  public start_disabled = false;
   public start() {
-    this.isInitialStart = false;
+    this.lap_array = [];
+    this.start_disabled = true;
+    this.lap_active = true;
     this.interval = setInterval(() => {
       this.started = true;
       this.time += 1;
@@ -32,6 +36,7 @@ export class StopwatchComponent implements OnInit {
   public stop() {
     clearInterval(this.interval);
     this.started = false;
+    this.lap_active = false;
   }
   public reset() {
     clearInterval(this.interval);
@@ -40,9 +45,12 @@ export class StopwatchComponent implements OnInit {
     this.ss = 0;
     this.ms = 0;
     this.time = 0;
-    this.isInitialStart = true;
     this.started = false;
+    this.start_disabled = false;
+    this.lap_active = false;
   }
-
+  public lap() {
+    this.lap_array.push({ hh: this.hh, mm: this.mm, ss: this.ss, ms: this.ms });
+  }
   ngOnInit(): void {}
 }
